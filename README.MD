@@ -1,3 +1,3 @@
-#Skolas API
+Skolas API
 
 Labākais skolas API pasaulē.
