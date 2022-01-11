@@ -1,22 +1,22 @@
 async function loadIntoTable(url, table) {
-  const tableHead = table.querySelector('thead');
-  const tableBody = table.querySelector('tbody');
+  const tableHead = table.querySelector("thead");
+  const tableBody = table.querySelector("tbody");
   const response = await fetch(url);
   const {headers, rows} = await response.json();
 
-  tableHead.InnerHTML = "<tr></tr>";
-  tableBody.InnerHTML = "";
+  tableHead.innerHTML = "<tr></tr>";
+  tableBody.innerHTML = "";
 
   for (const headerText of headers) {
     const headerElement = document.createElement("th");
     headerElement.textContent = headerText;
-    tableHead.querySelector('tr').appendChild(headerElement);
+    tableHead.querySelector("tr").appendChild(headerElement);
   }
 
   for (const row of rows) {
     const rowElement = document.createElement("tr");
-    for (cellText of row) {
-      const cellElement = document.createElement('td');
+    for (const cellText of row) {
+      const cellElement = document.createElement("td");
       cellElement.textContent = cellText;
       rowElement.appendChild(cellElement);
     }
@@ -24,4 +24,4 @@ async function loadIntoTable(url, table) {
   }
 }
 
-loadIntoTable('./data.json', document.querySelector('table'));
+loadIntoTable("./data.json", document.querySelector("table"));
