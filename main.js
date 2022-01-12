@@ -9,6 +9,7 @@ async function loadIntoTable(url, table) {
 
   for (const headerText of headers) {
     const headerElement = document.createElement("th");
+    headerElement.classList.add("headstyle");
     headerElement.textContent = headerText;
     tableHead.querySelector("tr").appendChild(headerElement);
   }
@@ -17,6 +18,7 @@ async function loadIntoTable(url, table) {
     const rowElement = document.createElement("tr");
     for (const cellText of row) {
       const cellElement = document.createElement("td");
+      cellElement.classList.add("rowstyle");
       cellElement.textContent = cellText;
       rowElement.appendChild(cellElement);
     }

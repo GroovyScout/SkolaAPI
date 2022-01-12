@@ -1,16 +1,28 @@
 {
     "headers": [
-        "User ID",
-        "Name",
-        "Occupation",
-        "Age"
+        "note ID",
+        "posX",
+        "posY",
+        "sizeX",
+        "sizeY",
+        "headerCol",
+        "bodyCol",
+        "fontSize",
+        "fontCol",
+        "text"
     ],
     "rows": [
         [
-            1234,
-            "Kristers",
-            "Skolnieks",
-            "17"
+            1,
+            "0",
+            "0",
+            "200",
+            "300",
+            "#0E2F3F",
+            "#081A23",
+            11,
+            "#E8E8E8",
+            "Lorem Ipsum"
         ]
     ]
 }
