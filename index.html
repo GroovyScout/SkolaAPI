@@ -12,26 +12,43 @@
             border-collapse: collapse;
             font-family: Arial, sans-serif;
         }
-        .table thead {
+        .table thead th {
             background-color: lightseagreen;
             color: #f9f9f9;
-        }
-        .headstyle {
             border: 1px solid black;
             padding: 8px;
         }
-        .rowstyle {
+        .table tbody tr:nth-of-type(even) {
             border: 1px solid black;
             padding: 5px;
+        }
+        #v2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .user {
+            background-color: gray;
+            color: white;
+            margin: 1em;
+            padding: 1em;
+            text-align: center;
+        }
+        .user img {
+            margin: auto auto;
         }
     </style>
 </head>
 <body>
-    <p>Hello World!</p>
-    <table class="table">
-        <thead></thead>
-        <tbody></tbody>
-    </table>
+    <main>
+        <p>Hello World!</p>
+        <table class="table">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+        <div id="v2">
+
+        </div>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
